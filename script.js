@@ -1,4 +1,5 @@
 const container = document.querySelector('#container')
+const changeBtn = document.querySelector('#change-grid')
 
 
   function createTiles(){
