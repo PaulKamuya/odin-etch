@@ -13,6 +13,12 @@ function createTiles(value){
       const col = document.createElement('div')
       col.className = 'tile'
       row.appendChild(col)
+
+      col.addEventListener('mouseover', (e) => {
+        const tile = e.target
+        tile.style.backgroundColor = 'black'
+      })
+      
     }
     container.appendChild(row)
   }
