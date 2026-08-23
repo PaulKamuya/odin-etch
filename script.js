@@ -3,7 +3,7 @@ const changeBtn = document.querySelector('#change-grid')
 
 function createTiles(value){
 
-  container.textContent = ''
+  container.textContent = '' //this makes a new grid every time the function is called
 
   for (let i = 0; i < value; i++){
     const row = document.createElement('div')
