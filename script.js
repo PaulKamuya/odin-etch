@@ -18,7 +18,7 @@ function createTiles(value){
   }
 }
 
-createTiles(16)
+
 
 //add a function to change the grid size
   //when you press the button a pop up should appear
@@ -27,22 +27,28 @@ createTiles(16)
     //let the user know you can enter a number more than 100
   //IF the number is less than 10 set the squares to 10
   //IF the number is more than 10 but less than or equal to 100 set that number of squares
+
+  //fix this
+
   changeBtn.addEventListener('click', () => {
   let amount = +prompt('Set the new grid size')
-
-  if (!amount) return alert('Enter a number')
 
   if (amount > 100){
     alert('Number too high grid set to 100x100')
     amount = 100
-    createTiles(100)
+    createTiles(amount)
 
   } else if (amount < 10){
     alert('Number too low grid set to 100x100')
     amount = 10
-    createTiles(10)
+    createTiles(amount)
 
-  }else createTiles(amount)
+  } else if (!amount){
+    amount = 10
+    createTiles(amount)
+    return alert('Grid set to 10x10')
+
+  } else createTiles(amount)
 
 })
 
