@@ -1,12 +1,15 @@
 const container = document.querySelector('#container')
 const changeBtn = document.querySelector('#change-grid')
 
+function createTiles(value){
 
-function createTiles(){
-  for (let i = 0; i < 16; i++){
+  container.textContent = ''
+
+  for (let i = 0; i < value; i++){
     const row = document.createElement('div')
     row.className = 'row'
-    for (let j = 0; j < 16; j++){
+    
+    for (let j = 0; j < value; j++){
       const col = document.createElement('div')
       col.className = 'tile'
       row.appendChild(col)
@@ -15,7 +18,7 @@ function createTiles(){
   }
 }
 
-createTiles()
+createTiles(16)
 
 //add a function to change the grid size
   //when you press the button a pop up should appear
@@ -24,6 +27,8 @@ createTiles()
     //let the user know you can enter a number more than 100
   //IF the number is less than 10 set the squares to 10
   //IF the number is more than 10 but less than or equal to 100 set that number of squares
+
+
 
 //add a function for when the mouse enters
   //when it enters change the colour of the background
