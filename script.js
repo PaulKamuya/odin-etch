@@ -52,18 +52,6 @@ createTiles(16)
   //when it enters change the colour of the background
   //when it leaves to stop colouring the box
 
-container.addEventListener('mouseover', (e) => {
-  const child = e.target
-
-  child.style.backgroundColor = 'black'
-})
-
-container.addEventListener('mouseout', (e) => {
-  const child = e.target
-
-  child.style.backgroundColor = 'white'
-})
-
 //add a funtion for when you click a box
   //when you click a box the background is 10% black
   //every time the user clicks the same box it gets darker
