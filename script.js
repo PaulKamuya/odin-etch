@@ -14,16 +14,21 @@ function createTiles(value){
       col.className = 'tile'
       row.appendChild(col)
 
-      col.addEventListener('mouseover', (e) => {
-        const tile = e.target
-        const randomColor = Math.floor(Math.random()*16777215).toString(16)
-        tile.style.backgroundColor = '#' + randomColor
-      })
+      col.addEventListener('mouseover', setColour)
+      
 
     }
     container.appendChild(row)
   }
 }
+
+const setColour = (element) => {
+  const tile = element.target
+  const randomColour = Math.floor(Math.random()* 16277215).toString(16)
+  tile.style.backgroundColor = '#' + randomColour
+}
+
+const something = () => console.log('hi')
 
 
 
