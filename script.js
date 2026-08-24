@@ -16,8 +16,8 @@ function createTiles(value){
 
       col.addEventListener('mouseover', (e) => {
         const tile = e.target
-        tile.style.backgroundColor = 'black'
-        
+        const randomColor = Math.floor(Math.random()*16777215).toString(16)
+        tile.style.backgroundColor = '#' + randomColor
       })
 
     }
@@ -51,6 +51,3 @@ changeBtn.addEventListener('click', () => {
   //make the background 10% opacity
   //every time the user hovers the same box it gets darker
   //when the user reachs 10 clicks the box is fully that color
-
-//add a function for when you right click a coloured box
-  //when the user right clicks a box the box gets lighter
