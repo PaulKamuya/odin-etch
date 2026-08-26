@@ -13,11 +13,9 @@ function createTiles(value){
       const col = document.createElement('div')
       col.className = 'tile'
       row.appendChild(col)
-
       col.addEventListener('mouseover', setColour)
-      
-
     }
+    
     container.appendChild(row)
   }
 }
@@ -27,10 +25,6 @@ const setColour = (element) => {
   const randomColour = Math.floor(Math.random()* 16277215).toString(16)
   tile.style.backgroundColor = '#' + randomColour
 }
-
-const something = () => console.log('hi')
-
-
 
 changeBtn.addEventListener('click', () => {
   let amount = +prompt('Set the new grid size')
@@ -50,9 +44,3 @@ changeBtn.addEventListener('click', () => {
   createTiles(amount)
 
 })
-
-
-//add a funtion for everytime you hover a box
-  //make the background 10% opacity
-  //every time the user hovers the same box it gets darker
-  //when the user reachs 10 clicks the box is fully that color
