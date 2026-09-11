@@ -22,8 +22,18 @@ function createTiles(value){
 
 const setColour = (e) => { //was element now e
   const tile = e.target
-  const randomColour = Math.floor(Math.random()* 16277215).toString(16)
-  tile.style.backgroundColor = '#' + randomColour
+  const colourString = randomHexColour()
+  console.log(colourString)
+  tile.style.backgroundColor = colourString
+}
+
+function randomHexColour(){
+  const randomColour = Math.floor(Math.random() * 16777216)
+  let hex = randomColour.toString(16)
+  while (hex.length < 6){
+    hex = '0' + hex
+  }
+  return '#' + hex
 }
 
 changeBtn.addEventListener('click', () => {
