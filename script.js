@@ -20,7 +20,7 @@ function createTiles(value){
   }
 }
 
-const setColour = (e) => {
+const setColour = (e) => { //was element now e
   const tile = e.target
   const randomColour = Math.floor(Math.random()* 16277215).toString(16)
   tile.style.backgroundColor = '#' + randomColour
