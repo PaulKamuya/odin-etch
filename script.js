@@ -23,7 +23,6 @@ function createTiles(n){
 const setColour = (e) => { 
   const tile = e.target
   const colourString = randomHexColour()
-  console.log(colourString)
   tile.style.backgroundColor = colourString
 }
 
