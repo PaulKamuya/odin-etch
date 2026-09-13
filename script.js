@@ -9,15 +9,20 @@ function createTiles(n){
   const tilePercentage = 100 / n
   const totalTiles = n*n;
   
+  const fragment = new DocumentFragment(); 
 
   for (let i = 0; i < totalTiles; i++){
     const tile = document.createElement('div')
+
     tile.className = 'tile'
     tile.style.width = `${tilePercentage}%`
     tile.style.height = `${tilePercentage}%`
+
     tile.addEventListener('mouseover', setColour)
-    container.appendChild(tile)
+    
+    fragment.append(tile)
   }
+  container.appendChild(fragment)
 }
 
 const setColour = (e) => { 
@@ -51,5 +56,4 @@ changeBtn.addEventListener('click', () => {
   }
 
   createTiles(amount)
-
 })
