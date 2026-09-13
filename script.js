@@ -4,6 +4,7 @@ const changeBtn = document.querySelector('#change-grid')
 function createTiles(value){
 
   container.textContent = '' //this makes a new grid every time the function is called
+  container.style.display = 'flex' // shows the container when the button is pressed
 
   for (let i = 0; i < value; i++){
     const row = document.createElement('div')
@@ -20,7 +21,7 @@ function createTiles(value){
   }
 }
 
-const setColour = (e) => { //was element now e
+const setColour = (e) => { 
   const tile = e.target
   const colourString = randomHexColour()
   console.log(colourString)
