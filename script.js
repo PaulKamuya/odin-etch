@@ -1,23 +1,22 @@
 const container = document.querySelector('#container')
 const changeBtn = document.querySelector('#change-grid')
 
-function createTiles(value){
+function createTiles(n){
 
   container.textContent = '' //this makes a new grid every time the function is called
   container.style.display = 'flex' // shows the container when the button is pressed
 
-  for (let i = 0; i < value; i++){
-    const row = document.createElement('div')
-    row.className = 'row'
-    
-    for (let j = 0; j < value; j++){
-      const col = document.createElement('div')
-      col.className = 'tile'
-      row.appendChild(col)
-      col.addEventListener('mouseover', setColour)
-    }
-    
-    container.appendChild(row)
+  const tilePercentage = 100 / n
+  const totalTiles = n*n;
+  
+
+  for (let i = 0; i < totalTiles; i++){
+    const tile = document.createElement('div')
+    tile.className = 'tile'
+    tile.style.width = `${tilePercentage}%`
+    tile.style.height = `${tilePercentage}%`
+    tile.addEventListener('mouseover', setColour)
+    container.appendChild(tile)
   }
 }
 
