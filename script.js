@@ -18,7 +18,20 @@ function createTiles(n){
     tile.style.width = `${tilePercentage}%`
     tile.style.height = `${tilePercentage}%`
 
-    tile.addEventListener('mouseover', setColour)
+    const tileColour = randomHexColour()
+    let hitCounter = 0
+
+    tile.addEventListener('mouseenter', () => {
+      if (hitCounter === 0){
+        tile.style.backgroundColor = tileColour
+        tile.style.opacity = 0.1
+      }
+
+      if (hitCounter < 10){
+        hitCounter = hitCounter + 1
+        tile.style.opacity = hitCounter * 0.1
+      }
+    })
     
     fragment.append(tile)
   }
