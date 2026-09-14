@@ -34,8 +34,8 @@ button:hover{
 #container{
   display: flex;
   border: 1px solid;
-  width: 500px;
-  height: 500px;
+  width: 37.5rem;
+  height: 37.5rem; /*600px*/
   flex-wrap: wrap;
   border-radius: 0.2rem;
   overflow: hidden;
