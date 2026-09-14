@@ -4,7 +4,6 @@ const changeBtn = document.querySelector('#change-grid')
 function createTiles(n){
 
   container.textContent = '' 
-  container.style.display = 'flex'
 
   const tilePercentage = 100 / n
   const totalTiles = n*n;
@@ -65,3 +64,5 @@ changeBtn.addEventListener('click', () => {
 
   createTiles(amount)
 })
+
+createTiles(16)
