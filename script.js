@@ -18,13 +18,13 @@ function createTiles(n){
     tile.style.width = `${tilePercentage}%`
     tile.style.height = `${tilePercentage}%`
 
-    const tileColour = randomHexColour()
+    let tileColour = null
     let hitCounter = 0
 
     tile.addEventListener('mouseenter', () => {
       if (hitCounter === 0){
+        tileColour = randomHexColour()
         tile.style.backgroundColor = tileColour
-        tile.style.opacity = 0.1
       }
 
       if (hitCounter < 10){
