@@ -3,8 +3,8 @@ const changeBtn = document.querySelector('#change-grid')
 
 function createTiles(n){
 
-  container.textContent = '' //this makes a new grid every time the function is called
-  container.style.display = 'flex' // shows the container when the button is pressed
+  container.textContent = '' 
+  container.style.display = 'flex'
 
   const tilePercentage = 100 / n
   const totalTiles = n*n;
