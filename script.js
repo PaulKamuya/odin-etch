@@ -38,11 +38,6 @@ function createTiles(n){
   container.appendChild(fragment)
 }
 
-const setColour = (e) => { 
-  const tile = e.target
-  const colourString = randomHexColour()
-  tile.style.backgroundColor = colourString
-}
 
 function randomHexColour(){
   const randomColour = Math.floor(Math.random() * 16777216)
