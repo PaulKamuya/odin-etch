@@ -16,7 +16,6 @@ function createTiles(n){
   
   const fragment = new DocumentFragment(); 
 
-
   for (let i = 0; i < totalTiles; i++){
     const tile = document.createElement('div')
 
@@ -80,14 +79,13 @@ changeBtn.addEventListener('click', () => {
 
 createTiles(16)
 
-tileEffectBtn.addEventListener('click', () => {
-  let btn = tileEffectBtn
+let effects = true
 
-  if (btn.textContent === 'Rainbow'){
-    btn.textContent = 'Black'
-  } else {
-    btn.textContent = 'Rainbow'
-  }
+tileEffectBtn.addEventListener('click', () => {
+  effects = !effects
+
+  effects ? tileEffectBtn.textContent = 'Rainbow'
+    : tileEffectBtn.textContent = 'Black'
 })
 
 
