@@ -1,5 +1,6 @@
 const container = document.querySelector('#container')
 const changeBtn = document.querySelector('#change-grid')
+const tileEffectBtn = document.querySelector('#rainbow')
 
 function createTiles(n){
 
@@ -66,3 +67,15 @@ changeBtn.addEventListener('click', () => {
 })
 
 createTiles(16)
+
+
+
+tileEffectBtn.addEventListener('click', () => {
+  let btn = tileEffectBtn
+
+  if (btn.textContent === 'Rainbow'){
+    btn.textContent = 'Black'
+  } else {
+    btn.textContent = 'Rainbow'
+  }
+})
