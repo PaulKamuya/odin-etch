@@ -3,7 +3,11 @@ const changeBtn = document.querySelector('#change-grid')
 const tileEffectBtn = document.querySelector('#rainbow')
 const clearBtn = document.querySelector('#clear')
 
+let tileAmount = 16
+
 function createTiles(n){
+
+  tileAmount = n
 
   container.textContent = '' 
 
@@ -12,9 +16,6 @@ function createTiles(n){
   
   const fragment = new DocumentFragment(); 
 
-  clearBtn.addEventListener('click', () => {
-    createTiles(n)
-  })
 
   for (let i = 0; i < totalTiles; i++){
     const tile = document.createElement('div')
@@ -73,7 +74,8 @@ changeBtn.addEventListener('click', () => {
     alert(`Grid set to ${amount}x${amount}`)
   }
 
-  createTiles(amount)
+  tileAmount = amount
+  createTiles(tileAmount)
 })
 
 createTiles(16)
