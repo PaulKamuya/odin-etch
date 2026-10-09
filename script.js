@@ -40,12 +40,17 @@ function createTiles(n){
 
 
 function randomHexColour(){
-  const randomColour = Math.floor(Math.random() * 16777216)
-  let hex = randomColour.toString(16)
-  while (hex.length < 6){
-    hex = '0' + hex
+
+  if(tileEffectBtn.textContent === 'Rainbow'){
+    const randomColour = Math.floor(Math.random() * 16777216)
+    let hex = randomColour.toString(16)
+    while (hex.length < 6){
+      hex = '0' + hex
+    }
+    return '#' + hex
+  } else {
+    return '#000'
   }
-  return '#' + hex
 }
 
 changeBtn.addEventListener('click', () => {
