@@ -90,3 +90,8 @@ tileEffectBtn.addEventListener('click', () => {
   }
 })
 
+
+clearBtn.addEventListener('click', () => {
+  createTiles(tileAmount)
+})
+
